@@ -19,5 +19,5 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Project specific - ignore individual chapter repos
-py_*_gh/.git/
+# Project specific - ignore individual chapter repos (they're independent)
+py_*_gh/
