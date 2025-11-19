@@ -1,0 +1,269 @@
+name: Test All Projects
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-chapter-01:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_01_signal_and_num_sys_gh
+      run: |
+        cd py_01_signal_and_num_sys_gh
+        python py_01_signal_and_num_sys_gh.py
+
+  test-chapter-02:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_02_analog_signals_gh
+      run: |
+        cd py_02_analog_signals_gh
+        python py_02_analog_signals_gh.py
+
+  test-chapter-03:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_03_digital_signals_gh
+      run: |
+        cd py_03_digital_signals_gh
+        python py_03_digital_signals_gh.py
+
+  test-chapter-04:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_04_number_systems_gh
+      run: |
+        cd py_04_number_systems_gh
+        python py_04_number_systems_gh.py
+
+  test-chapter-05:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_05_conversions_gh
+      run: |
+        cd py_05_conversions_gh
+        python py_05_conversions_gh.py
+
+  test-chapter-06:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_06_complements_gh
+      run: |
+        cd py_06_complements_gh
+        python py_06_complements_gh.py
+
+  test-chapter-07:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_07_signed_magnitude_gh
+      run: |
+        cd py_07_signed_magnitude_gh
+        python py_07_signed_magnitude_gh.py
+
+  test-chapter-08:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_08_binary_addition_subtraction_gh
+      run: |
+        cd py_08_binary_addition_subtraction_gh
+        python py_08_binary_addition_subtraction_gh.py
+
+  test-chapter-09:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_09_floating_point_representation_gh
+      run: |
+        cd py_09_floating_point_representation_gh
+        python py_09_floating_point_representation_gh.py
+
+  test-chapter-10:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_10_binary_coded_decimals_gh
+      run: |
+        cd py_10_binary_coded_decimals_gh
+        python py_10_binary_coded_decimals_gh.py
+
+  test-chapter-11:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_11_coding_schemas_gh
+      run: |
+        cd py_11_coding_schemas_gh
+        python py_11_coding_schemas_gh.py
+
+  test-chapter-12:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_12_parity_bits_gh
+      run: |
+        cd py_12_parity_bits_gh
+        python py_12_parity_bits_gh.py
+
+  test-chapter-13:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_13_clock_signals_gh
+      run: |
+        cd py_13_clock_signals_gh
+        python py_13_clock_signals_gh.py
+
+  test-chapter-14:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_14_transmission_types_gh
+      run: |
+        cd py_14_transmission_types_gh
+        python py_14_transmission_types_gh.py
+
+  test-chapter-15:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_15_transmission_methods_gh
+      run: |
+        cd py_15_transmission_methods_gh
+        python py_15_transmission_methods_gh.py
+
+  test-chapter-16:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Test py_16_course_summary_and_exercises_gh exercises
+      run: |
+        cd py_16_course_summary_and_exercises_gh
+        for dir in ex*/; do
+          if [ -f "${dir}${dir%/}.py" ]; then
+            echo "Testing ${dir}"
+            python "${dir}${dir%/}.py"
+          fi
+        done
